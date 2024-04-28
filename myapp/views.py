@@ -38,7 +38,7 @@ def logout_view(request):
 #     else:
 #         return render(request,'changepassword.html')
 @login_required
-def changePassword(request):
+def changePassword(request):  #sohag #sohagsohag
     if request.method == 'POST':
         current_password = request.POST.get('currentPassword')
         new_password = request.POST.get('newPassword')
