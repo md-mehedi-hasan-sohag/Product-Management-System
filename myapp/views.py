@@ -40,3 +40,5 @@ def logout_view(request):
     logout(request)
     return render(request, 'index.html')
 
+def changePassword(request):
+    return render(request,'changepassword.html')

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,78 @@
 <body>
     <h1>Logout</h1>
     <p>You are logged in successfully!</p>
-    <form method="post" action="{% url 'logout' %}">
-        {% csrf_token %}
-        <input type="submit" value="Logout">
-    </form>
+    <!-- <form method="post" action="">
+        <input type="submit" value="Login">
+    </form> -->
+       <!-- {% csrf_token %}
+    <button><a href="{% url 'logout' %}"> Log out</a></button>
+    <button><a href="{% url 'changePassword' %}"> Log out</a></button>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: rgb(28, 28, 50);
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* margin-bottom: 1rem; */
+        }
+
+        h1, p {
+            text-align: center;
+            margin-bottom: 1rem; /* Add margin below h1 and p */
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            width: 100%; /* Set button width to 100% */
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #007d00; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Logout</h1>
+    <p>You are logged in successfully!</p>
+    <div class="container">
+        <button><a href="{% url 'logout' %}">Log out</a></button>
+        <button><a href="{% url 'changePassword' %}">Change Password</a></button>
+    </div>
 </body>
 </html>
