@@ -16,29 +16,13 @@ def login_view(request):
             return HttpResponse("Invalid username or password")
     else:
         return render(request, 'index.html')
-    
+@login_required   
 def logout_view(request):
     logout(request)
     return render(request, 'index.html')
 
-# @login_required
-# def changePassword(request):
-#     if request.method == 'POST':
-#         current_password = request.POST.get('currentPassword')
-#         new_password = request.POST.get('newPassword')
-#         confirm_password = request.POST.get('confirmPassword')
-
-#         user = request.user
-#         if user.check_password(current_password):
-#             if new_password == confirm_password:
-#                 user.set_password(new_password)
-#                 user.save()
-#                 update_session_auth_hash(request,user)
-#                 return HttpResponse("Password has changed!")
-#     else:
-#         return render(request,'changepassword.html')
 @login_required
-def changePassword(request):  #sohag #sohagsohag
+def changePassword(request):  #sohag #sohagsohag #mehedi #BracBrac
     if request.method == 'POST':
         current_password = request.POST.get('currentPassword')
         new_password = request.POST.get('newPassword')
