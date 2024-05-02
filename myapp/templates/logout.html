@@ -37,6 +37,7 @@
         button {
             padding: 0.5rem 1rem;
             width: 100%; /* Set button width to 100% */
+            height: 40px;
             background-color: green;
             color: white;
             border: none;
@@ -44,6 +45,7 @@
             cursor: pointer;
             margin-bottom: 1rem;
             margin-top: 1rem;
+            font-size: 17px;
         }
 
         button a {
@@ -62,6 +64,8 @@
     <div class="container">
         <button><a href="{% url 'login' %}">Log out</a></button>
         <button><a href="{% url 'changePassword' %}">Change Password</a></button>
+        <button><a href="{% url 'addproduct'%}">Add Product</a></button>
+        <button><a href="#">View Product</a></button>
     </div>
 </body>
 </html>
